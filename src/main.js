@@ -1,4 +1,6 @@
 const Hapi = require('hapi');
+const Vision = require('@hapi/vision');
+const Ejs = require('ejs');
 const Routes = require('./routes');
 
 const server = Hapi.server({
@@ -7,6 +9,15 @@ const server = Hapi.server({
 });
 
 const init = async () => {
+
+  await server.register(Vision);
+
+  server.views({
+    engines: { ejs: Ejs },
+    relativeTo: __dirname,
+    path: 'templates'
+  });
+
   server.route(Routes);
   await server.start();
   console.log(`Server running at: ${server.info.uri}`);

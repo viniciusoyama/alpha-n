@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@hapi/vision": "^5.5.4",
     "dummy-data": "0.0.8",
+    "ejs": "^3.0.1",
     "hapi": "^18.1.0"
   },
   "devDependencies": {

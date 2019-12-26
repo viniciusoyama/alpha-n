@@ -5,21 +5,8 @@ var spec = {
   email: "String"
 };
 
-var customers = dummy.generate(spec, null, 10);
-
 module.exports = {
   handler: (request, response) => {
-    return `
-      <html>
-        <head>
-        </head>
-        <body>
-          <h1>Index</h1>
-          ${
-            customers.map((c) => `<li>Name: ${c.name} - Email: ${c.email}</li>`).join('')
-          }
-        </body>
-      </html>
-    `;
+    return response.view('index', { customers: dummy.generate(spec, null, 10) });
   }
 }
