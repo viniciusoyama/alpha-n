@@ -14,6 +14,7 @@ module.exports = {
         <head>
         </head>
         <body>
+          <h1>Index</h1>
           ${
             customers.map((c) => `<li>Name: ${c.name} - Email: ${c.email}</li>`).join('')
           }
