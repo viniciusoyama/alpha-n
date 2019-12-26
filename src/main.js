@@ -15,7 +15,8 @@ const init = async () => {
   server.views({
     engines: { ejs: Ejs },
     relativeTo: __dirname,
-    path: 'templates'
+    path: 'templates',
+    layout: true
   });
 
   server.route(Routes);
