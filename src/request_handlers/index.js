@@ -1,12 +1,7 @@
-var dummy = require('dummy-data');
-
-var spec = {
-  name: "String",
-  email: "String"
-};
+const Customer = require('../models/customer');
 
 module.exports = {
   handler: (request, response) => {
-    return response.view('index', { customers: dummy.generate(spec, null, 10) });
+    return response.view('index', { customers: Customer.all() });
   }
 }

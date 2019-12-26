@@ -1,13 +1,7 @@
-var dummy = require('dummy-data');
+const User = require('../models/user');
 
 module.exports = {
   handler: (request, response) => {
-    return response.view('users', { users: [{
-        name: 'Test 1'
-      },
-      {
-        name: 'Test 2'
-      }]
-    });
+    return response.view('users', { users: User.all() });
   }
 }
