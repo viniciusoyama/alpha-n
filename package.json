@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dummy-data": "0.0.8"
+    "dummy-data": "0.0.8",
+    "hapi": "^18.1.0"
   },
   "devDependencies": {
     "jest": "^24.9.0"

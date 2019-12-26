@@ -15,7 +15,6 @@ class FakeResponse {
 
 test('Responds with 10 customers', () => {
   let myFakeResponse = new FakeResponse();
-  requestHandler.handler({}, myFakeResponse);
-  let htmlResponse = myFakeResponse.wroteValues[0];
+  let htmlResponse = requestHandler.handler({}, myFakeResponse);
   expect(htmlResponse.match(/<li>Name:/g).length).toBe(10)
 });

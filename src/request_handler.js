@@ -9,9 +9,7 @@ var customers = dummy.generate(spec, null, 10);
 
 module.exports = {
   handler: (request, response) => {
-    response.writeHead(200, { "Content-Type": "text/html" });
-
-    const html = `
+    return `
       <html>
         <head>
         </head>
@@ -22,9 +20,5 @@ module.exports = {
         </body>
       </html>
     `;
-
-    response.write(html);
-
-    response.end();
   }
 }
