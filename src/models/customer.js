@@ -14,17 +14,11 @@ class Customer {
   get name(){
     return this._name;
   }
-  set name(val){
-    this._name = val;
-  }
 
   get email(){
     return this._name;
   }
-  set email(val){
-    this._name = val;
-  }
-
+  
   static all() {
     return dummy.generate(spec, null, 10).map((attrs) => new Customer(attrs));
   }

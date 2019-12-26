@@ -1,5 +1,5 @@
-const index = require('./request_handlers/index.js');
-const users = require('./request_handlers/users.js');
+const index = require('./controllers/index.js');
+const users = require('./controllers/users.js');
 
 module.exports = [
   {
@@ -10,6 +10,21 @@ module.exports = [
   {
       method: 'GET',
       path: '/users',
-      handler: users.handler
+      handler: users.index
+  },
+  {
+      method: 'GET',
+      path: '/users/destroy',
+      handler: users.destroy
+  },
+  {
+      method: 'GET',
+      path: '/users/update',
+      handler: users.update
+  },
+  {
+      method: 'GET',
+      path: '/users/create',
+      handler: users.create
   }
 ]
